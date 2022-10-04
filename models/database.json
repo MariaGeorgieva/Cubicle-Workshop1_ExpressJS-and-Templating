@@ -1,0 +1,51 @@
+[
+  {
+    "id": "5c39f1851ab3b24f5c03e182",
+    "name": "Gan356 Air SM",
+    "level": 3,
+    "description": "Gan356 Air SM description",
+    "imgURL": "https://ae01.alicdn.com/kf/HTB1CSddXRxRMKJjy0Fdq6yifFXa6/Gan-356-Air-SM-3x3-Black-Magic-cube-GAN-Air-SM-Magnetic-3x3x3-Speed-cube-gans.jpg"
+  },
+  {
+    "id": "5c39f1851ab3b24f5c03e183",
+    "name": "Eco-Dark",
+    "level": 6,
+    "description": "Eco-Dark description",
+    "imgURL": "https://thingsidesire.com/wp-content/uploads/2018/06/Eco-Dark-Rubik%E2%80%99s-Cube2.jpg"
+  },
+  {
+    "id": "5c3a68d9f78d6638ec8fdad7",
+    "name": "Megaminx",
+    "level": 3,
+    "description": "Megaminx description",
+    "imgURL": "https://images-na.ssl-images-amazon.com/images/I/61HpQqVQ37L._SY355_.jpg"
+  },
+  {
+    "id": "5c3a6888f78d6638ec8fdad6",
+    "name": "Pyraminx",
+    "description": "Pyraminx description",
+    "level": 1,
+    "imgURL": "https://images-na.ssl-images-amazon.com/images/I/61izOzq%2BBAL._SY355_.jpg"
+  },
+  {
+    "id": "09d15d",
+    "name": "CuberSpeed Axis V2",
+    "description": "Prefer a bit of abstract art mixed in with your puzzle games? So do we, which is why we couldn’t leave the Axis V2 Black Magic 3×3 Cube off our list. Although it’s the same overall cube-y shape we’ve come to know and love, this one (nicknamed the Black Magic cube) is known as a shape-mod cube. It’s a super pick if you’re looking for a model with a challenging (and visually stunning) design.",
+    "level": 3,
+    "imgURL": "https://m.media-amazon.com/images/I/71ueVZKxY8L._AC_SL1000_.jpg"
+  },
+  {
+    "id": "0725dd",
+    "name": "CuberSpeed Mastermorphix stickerless 3X3 Magic",
+    "description": "The QiYi Mastermorphix (also called master pyramorphix) is a 3x3 morphix shape mod\r\nThis particular variant features stickerless bright colored pieces. It is pre-lubricated from the factory and performs very well right out of the box.\r\nupgradeed tactile quality, using a brand new 77.5mm larger size and a brand new curved surface design, this puzzle offers better grip and unmatched color radiance.",
+    "imgURL": "https://m.media-amazon.com/images/I/61Y7SYMWAiL._AC_SL1200_.jpg",
+    "level": "5"
+  },
+  {
+    "id": "0c90a1",
+    "name": "CuberSpeed Twist 3x3 stickerelss Speed Cube",
+    "description": "The Twist Cube is a 3x3 shape mod that appears as if the yellow layer has been forcibly twisted 90 degrees relative to the white layer, distorting the other layers in the process. It features a vibrant stickerless bright color scheme.\r\nMade of high-quality ABS material that is safe and durable to use.the traditional stickers have been replaced with original and ABS material, which mean no fading, peeling\r\nAdopted the optimized material make every turning more compliant and more comfortable as you wish.\r\nThe 6 plastic color puzzle never requires stickers , crafted with original and abs material, non toxic, reliable, lightweight, comfortable in the hand",
+    "imgURL": "https://m.media-amazon.com/images/I/51pjlV9U54L._AC_SL1100_.jpg",
+    "level": "6"
+  }
+]
