@@ -34,7 +34,13 @@ async function createCube(cubeData) {
         name: cubeData.name,
         description: cubeData.description,
         imgURL: cubeData.imgURL,
-        level: cubeData.level,
+        level: Number(cubeData.level),
+    }
+
+    //validation form and error handling 
+    const missingFields = Object.entries(cube).filter(([k, v]) => !v);
+    if (missingFields.length > 0) {
+        throw new Error(missingFields.map(m => `${m[0]} is required!`).join('\n'));
     }
 
     data.push(cube);
