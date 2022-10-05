@@ -7,8 +7,6 @@ router.get('/', async (req, res) => {
     const fromDiff = req.query.from || 1;
     const toDiff = req.query.to || 6;
 
-    console.log('search, fromDiff, toDiff', search, fromDiff, toDiff);
-
     const cubes = await getAll(search, fromDiff, toDiff);
     res.render('catalog', {
         cubes,
@@ -18,9 +16,9 @@ router.get('/', async (req, res) => {
     })
 });
 
-router.get('/details/:id', (req, res) => {
+router.get('/details/:id', async (req, res) => {
     const cubeId = req.params.id;
-    const cube = getById(cubeId)
+    const cube = await getById(cubeId)
 
     if (cube) {
         res.render('details', {
@@ -31,5 +29,6 @@ router.get('/details/:id', (req, res) => {
         res.render('404');
     }
 });
+
 
 module.exports = router;
