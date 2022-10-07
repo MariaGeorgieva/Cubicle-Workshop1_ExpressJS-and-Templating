@@ -1,14 +1,14 @@
 const aboutController = require('../controllers/aboutController');
 const catalogController = require('../controllers/catalogController');
 const createController = require('../controllers/createController');
+const accessoryController = require('../controllers/accessoryController')
 
 
 module.exports = (app) => {
     app.use(catalogController);
     app.use('/about', aboutController);
     app.use('/create', createController);
-    app.use('/create/accessory', createController);
-    app.use('/attach/accessory/:id', createController);
+    app.use('/accessory', accessoryController);
 
 
     app.all('*', (req, res) => {

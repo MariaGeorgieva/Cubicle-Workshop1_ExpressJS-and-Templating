@@ -5,7 +5,6 @@ function getAll(search, fromDiff, toDiff) {
     return Cube.find({}).lean();
 }
 
-
 function getById(id) {
     return Cube.findById(id).lean();
 

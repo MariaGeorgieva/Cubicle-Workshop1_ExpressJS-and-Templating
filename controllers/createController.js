@@ -20,15 +20,6 @@ router.post('/', async (req, res) => {
     }
 });
 
-router.get('/accessory', (req, res) => {
-    res.render('createAccessory');
-
-});
-
-router.get('/attach/accessory/:id ', (req, res) => {
-    res.render('attachAccessory');
-
-});
 
 
 

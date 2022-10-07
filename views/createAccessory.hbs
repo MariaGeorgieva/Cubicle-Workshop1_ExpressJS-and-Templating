@@ -1,6 +1,13 @@
 <h1>Create Accessory</h1>
+{{#if error}}
+<div>
+  {{#each error}}
+  <span class="error"> {{this}} </span>
+{{/each}}
+</div>
+{{/if}}
 <div class="form">
-    <form action="/create/accessory" method="POST">
+    <form action="/accessory/create" method="POST">
         <label for="name">Name</label>
         <input type="text" id="name" name="name">
         <label for="name">Description</label>
