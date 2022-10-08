@@ -23,24 +23,39 @@ accessoryController.post('/create', async (req, res) => {
 });
 
 accessoryController.get('/attach/:id', async (req, res) => {
-    const cubeId = req.params.id;
-    const cube = await getById(cubeId);
+    const cube = await getById(req.params.id);
     const accessories = await getAllAccessories();
+
+    // const missingAccessories = [];
+    // Check if accessory is already attached to the cube
+    let missingAccessories = [];
+    let alreadyAttached = [];
+
+    if (cube.accessory) {
+        for (let acc of cube.accessory) {
+            alreadyAttached.push(acc._id.toString());
+        };
+    }
+
+
+    for (let accessory of accessories) {
+        if (!alreadyAttached.includes(accessory._id.toString())) {
+            missingAccessories.push(accessory);
+        }
+    }
 
     res.render('attachAccessory', {
         title: 'Attach Accessories to cube',
         cube,
-        accessories
+        missingAccessories
     });
 
 });
 
 accessoryController.post('/attach/:id', async (req, res) => {
 
-    console.log(req.body);
-    await addAccessoriesToCube(req.params.id, Object.keys(req.body));
+    await addAccessoriesToCube(req.params.id, Object.values(req.body));
 
-    // res.redirect('/accessory/attach/' + req.params.id);
     res.redirect('/details/' + req.params.id);
 });
 

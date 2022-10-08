@@ -2,13 +2,17 @@
 <div class="form">
     <h2>{{cube.name}}</h2>
     <img class="cube" src="{{cube.imgURL}}">
+
+    {{#if missingAccessories}}
     <form action="/accessory/attach/{{cube._id}}" method="post">
         <label for="accessory">Accessories</label>
-        {{#if accessories }}
-        <select id="accessory" name="accessory"/>
-        {{#each accessories}}
+
+        <select id="accessory" name="accessory" />
+        <option disabled selected value> -- select an option -- </option>
+
+        {{#each missingAccessories}}
         <option value="{{_id}}">{{name}}</option>
-        {{/each}}nodemon
+        {{/each}}
         </select>
         <input type="submit" value="Attach">
     </form>
@@ -16,5 +20,5 @@
     <h3 class="italic">This cube has all available accessories so far or there is no available at all...</h3>
     {{/else}}
     {{/if}}
-    <a class="btn" href="/">Back</a>
+    <a class="btn" href="/details/{{cube._id}}">Back</a>
 </div>
