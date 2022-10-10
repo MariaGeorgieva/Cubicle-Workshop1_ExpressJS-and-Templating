@@ -26,7 +26,6 @@ accessoryController.get('/attach/:id', async (req, res) => {
     const cube = await getById(req.params.id);
     const accessories = await getAllAccessories();
 
-    // const missingAccessories = [];
     // Check if accessory is already attached to the cube
     let missingAccessories = [];
     let alreadyAttached = [];
@@ -44,6 +43,7 @@ accessoryController.get('/attach/:id', async (req, res) => {
         }
     }
 
+  
     res.render('attachAccessory', {
         title: 'Attach Accessories to cube',
         cube,

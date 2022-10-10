@@ -20,12 +20,11 @@ router.get('/', async (req, res) => {
 router.get('/details/:id', async (req, res) => {
     const cubeId = req.params.id;
     const cube = await getById(cubeId).populate('accessory');
-  
 
+   
     if (cube) {
         res.render('details', {
             cube,
-
         });
 
     } else {
