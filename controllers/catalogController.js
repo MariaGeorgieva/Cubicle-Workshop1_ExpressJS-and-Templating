@@ -21,6 +21,9 @@ router.get('/details/:id', async (req, res) => {
     const cubeId = req.params.id;
     const cube = await getById(cubeId).populate('accessory');
 
+    if (req.user && req.user._id == cube.owner) {
+        cube.isOwner = true;
+    }
 
     if (cube) {
         res.render('details', {
@@ -43,11 +46,11 @@ router.post('/edit', (req, res) => {
 
 router.get('/delete', (req, res) => {
     res.render('deleteCube')
-    
+
 });
 
 router.get('/post', (req, res) => {
-    
+
 });
 
 router.get('/logout', (req, res) => {

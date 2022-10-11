@@ -5,9 +5,10 @@
     <p><span>Description:</span></p>{{description}}
     <p><span>Difficulty level:</span> {{level}}</p>
     <a class="btn" href="/">Back</a>
+    {{#if isOwner}}
     <a class="btn" href="/edit">Edit</a>
     <a class="btn" href="/delete">Delete</a>
-
+    {{/if}}
 </div>
 <h2>Accessories</h2>
 <div class="accessories">

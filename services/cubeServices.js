@@ -10,12 +10,13 @@ function getById(id) {
 
 }
 
-async function createCube(cubeData) {
+async function createCube(cubeData, ownerId) {
     const cube = {
         name: cubeData.name,
         description: cubeData.description,
         imgURL: cubeData.imgURL,
         level: Number(cubeData.level),
+        owner: ownerId
     }
 
     //validation form and error handling 
