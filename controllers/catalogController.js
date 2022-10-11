@@ -21,7 +21,7 @@ router.get('/details/:id', async (req, res) => {
     const cubeId = req.params.id;
     const cube = await getById(cubeId).populate('accessory');
 
-   
+
     if (cube) {
         res.render('details', {
             cube,
@@ -30,6 +30,29 @@ router.get('/details/:id', async (req, res) => {
     } else {
         res.render('404');
     }
+});
+
+router.get('/edit', (req, res) => {
+    res.render('editCube')
+
+});
+
+router.post('/edit', (req, res) => {
+
+});
+
+router.get('/delete', (req, res) => {
+    res.render('deleteCube')
+    
+});
+
+router.get('/post', (req, res) => {
+    
+});
+
+router.get('/logout', (req, res) => {
+    res.clearCookie('jwt');
+    return res.redirect('/');
 });
 
 module.exports = router;

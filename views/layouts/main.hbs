@@ -11,13 +11,25 @@
 <body>
   <div class="container">
     <header>
+
       <ul>
-        <li><img class="logo" src="/static/images/logo.png"></li>
+        <li><a href="/"><img class="logo" src="/static/images/logo.png"></a></li>
         <li><a href="/">Browse</a></li>
+        <li><a href="/about">About</a></li>
+        {{#if hasUser}}
         <li><a href="/create">Add a Cube</a></li>
         <li><a href="/accessory/create">Add Accessory</a></li>
-        <li><a href="/about">About</a></li>
+        <li><a href="/logout">Logout</a></li>
+        {{else}}
+        <li><a href="/login">Login</a></li>
+        <li><a href="/register">Register</a></li>
+        {{/if}}
+
+        {{#if hasUser}}
+        <span>Welcome, {{username}}</span>
+        {{/if}}
       </ul>
+
     </header>
     <main>
 
@@ -25,7 +37,7 @@
 
     </main>
   </div>
-  <footer>@Cubicle: Exercise for Express.js and Handlebars</footer>
+  <footer>@Cubicle: Exercise for Express.js, Handlebars and JWT <br>@MG SoftUni project</footer>
 </body>
 
 </html>
